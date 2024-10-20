@@ -1,0 +1,113 @@
+{% load static %}
+<header id="site-header" class="site-header site-header-4 header-static">
+    <!-- Main Header start -->
+    <div class="header-desktop">
+        <div class="octf-main-header is-fixed">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-logo align-self-center">
+                        <div id="site-logo" class="site-logo">
+                            <a href="{% url 'supplier' %}">
+                                <img src="{% static 'agriweb/images/logo.svg' %}" alt="Agriknow" class="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-menu">
+                        <nav id="site-navigation" class="main-navigation">
+                            <ul class="menu">
+                                <li><a href="{% url 'supplier' %}">Home</a></li>
+                                <li><a href="{% url 'blog' %}">Blogs</a></li>
+                                <li><a href="{% url 'contact' %}">Contacts</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-cta align-self-center">
+                        <div class="octf-btn-cta justify-content-end">
+
+                            <div class="octf-search octf-cta-header align-self-center">
+                                <div class="toggle_search octf-cta-icons">
+                                    <i class="ot-flaticon-magnifiying-glass"></i>
+                                </div>
+                                <!-- Form Search on Header -->
+                                <div class="h-search-form-field collapse">
+                                    <div class="search-overlay"></div>
+                                    <div class="h-search-form-inner">
+                                        <i class="ot-flaticon-close"></i>
+                                        <div class="container">
+                                            <form role="search" method="get" id="hsearch-form" class="search-form">
+                                                <span class="pre-text">What are you looking for?</span>
+                                                <input type="search" class="search-field" placeholder="Enter Keyword…" value="" name="s">
+                                                <button type="submit" class="search-submit"><i class="ot-flaticon-magnifiying-glass"></i></button>
+                                            </form>
+                                        </div>
+                                    </div>                                  
+                                </div>
+                            </div>
+
+                            <div class="octf-header-btn octf-cta-header">
+                                <div class="btn-cta-group btn-cta-header d-flex">
+                                    <a class="octf-btn btn-main-2 mr-2" href="{% url 'contact' %}">Contact</a>
+                                    <a class="octf-btn btn-main-1" href="{% url 'index' %}">Farmer</a>
+                                </div>
+                            </div>
+                            
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="header_mobile">
+        <div class="container-fluid">
+            <div class="octf-mainbar-row octf-row">
+                <div class="octf-col">
+                    <div class="mlogo_wrapper clearfix">
+                        <div class="mobile_logo">
+                            <a href="{% url 'supplier' %}">
+                                <img src="{% static 'agriweb/images/logo.svg' %}" alt="Progrisaas">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="octf-col justify-content-end">
+                    <div class="octf-search octf-cta-header align-self-center">
+                        <div class="toggle_search octf-cta-icons">
+                            <i class="ot-flaticon-magnifiying-glass"></i>
+                        </div>
+                        <!-- Form Search on Header -->
+                        <div class="h-search-form-field collapse">
+                            <div class="search-overlay"></div>
+                            <div class="h-search-form-inner">
+                                <i class="ot-flaticon-close"></i>
+                                <div class="container">
+                                    <form role="search" method="get" id="hsearch-form" class="search-form">
+                                        <span class="pre-text">What are you looking for?</span>
+                                        <input type="search" class="search-field" placeholder="Enter Keyword…" value="" name="s">
+                                        <button type="submit" class="search-submit"><i class="ot-flaticon-magnifiying-glass"></i></button>
+                                    </form>
+                                </div>
+                            </div>                                  
+                        </div>
+                    </div>
+                    <div id="mmenu-toggle" class="mmenu-toggle align-self-center">
+                        <button><i class="ot-flaticon-menu-of-three-lines"></i></button>
+                    </div>
+                    <div class="site-overlay mmenu-overlay"></div>
+                </div>
+                <div id="mmenu-wrapper" class="mmenu-wrapper on-right">
+                    <div class="mmenu-inner">
+                        <a class="mmenu-close" href="#"><i class="ot-flaticon-right-arrow"></i></a>
+                        <div class="mobile-nav">
+                            <ul id="menu-main-menu" class="mobile_mainmenu none-style">
+                                <li><a href="{% url 'supplier' %}">Home</a></li>
+                                <li><a href="{% url 'blog' %}">Blogs</a></li>
+                                <li><a href="{% url 'contact' %}">Contacts</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

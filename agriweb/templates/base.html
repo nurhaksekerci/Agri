@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'agriweb/images/favicon.png' %}" />
+    <title>{{ title|upper }} | Agriknow</title>
+    {% block extra_css %}{% endblock extra_css %}
+</head>
+
+<body class="royal_preloader">
+    <div id="page" class="site">
+        {% include 'includes/header.html' %}
+
+        {% block content %}{% endblock content %}
+
+        {% include "includes/footer.html" %}<!-- #site-footer -->
+    </div><!-- #page -->
+    <a id="back-to-top" href="#"><i class="ot-flaticon-up-arrow"></i></a>
+    <!-- jQuery -->
+    {% block extra_js %}{% endblock extra_js %}
+</body>
+
+</html>
