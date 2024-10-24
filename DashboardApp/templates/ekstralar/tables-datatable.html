@@ -1,0 +1,79 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "DataTables"})
+
+        <!-- DataTables -->
+        <link href="{% static "libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" %}" rel="stylesheet" type="text/css" />
+        <link href="{% static "libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" %}" rel="stylesheet" type="text/css" />
+
+        <!-- Responsive datatable examples -->
+        <link href="{% static "libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" %}" rel="stylesheet" type="text/css" /> 
+
+        @@include("partials/head-css.html")
+
+    </head>
+    {% block content %}
+    @@include("partials/body.html")
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            @@include("partials/menu.html")
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        @@include("partials/page-title.html", {"pagetitle": "Tables", "title": "DataTables"})
+
+                        {% include 'components/ekstralar/datatable_default-table.html' %}
+                        {% include 'components/ekstralar/datatable_buttons-table.html' %}
+
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+                
+                @@include("partials/footer.html")
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        @@include("partials/right-sidebar.html")
+
+        @@include("partials/vendor-scripts.html")
+
+        <!-- Required datatable js -->
+        <script src="{% static "libs/datatables.net/js/jquery.dataTables.min.js" %}"></script>
+        <script src="{% static "libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js" %}"></script>
+        <!-- Buttons examples -->
+        <script src="{% static "libs/datatables.net-buttons/js/dataTables.buttons.min.js" %}"></script>
+        <script src="{% static "libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js" %}"></script>
+        <script src="{% static "libs/jszip/jszip.min.js" %}"></script>
+        <script src="{% static "libs/pdfmake/build/pdfmake.min.js" %}"></script>
+        <script src="{% static "libs/pdfmake/build/vfs_fonts.js" %}"></script>
+        <script src="{% static "libs/datatables.net-buttons/js/buttons.html5.min.js" %}"></script>
+        <script src="{% static "libs/datatables.net-buttons/js/buttons.print.min.js" %}"></script>
+        <script src="{% static "libs/datatables.net-buttons/js/buttons.colVis.min.js" %}"></script>
+
+        <!-- Responsive examples -->
+        <script src="{% static "libs/datatables.net-responsive/js/dataTables.responsive.min.js" %}"></script>
+        <script src="{% static "libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js" %}"></script>
+
+        <!-- Datatable init js -->
+        <script src="{% static "js/pages/datatables.init.js" %}"></script>    
+
+        <script src="{% static "js/app.js" %}"></script>
+
+    </body>
+</html>
+{% endblock content %}

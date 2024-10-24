@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('agriweb.urls')),
     path('api/', include('api.urls')),
+    path('', include('DashboardApp.urls')),  # DashboardApp'e yönlendirme
 ]
 
 if settings.DEBUG:

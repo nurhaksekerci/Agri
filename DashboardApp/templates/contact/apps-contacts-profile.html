@@ -1,0 +1,82 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+  <!-- ============================================================== -->
+  <!-- Start right Content here -->
+  <!-- ============================================================== -->
+  {% block content %}
+    <div class="main-content">
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="profile-user"></div>
+            </div>
+          </div>
+
+          <div class="row">
+            {% comment %}! profil kısmı{% endcomment %}
+
+            {% include 'components/contact/contact-profil.html' %}
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              {% comment %}!overview kısmı{% endcomment %}
+              {% include 'components/contact/contact-overview.html' %}
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xl-8 col-lg-8">
+              {% comment %}! About kısmı{% endcomment %}
+
+              {% include 'components/contact/contact-about.html' %}
+              <!-- end tab content -->
+            </div>
+            <!-- end col -->
+
+            <div class="col-xl-4 col-lg-4">
+              <div class="card">
+                {% comment %}! Team Members kısmı{% endcomment %}
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Team Members</h5>
+                </div>
+                {% comment %}! for döngüsüne alınabilecek kısım include olarak alındı{% endcomment %}
+                <div class="card-body">
+                  {% include 'components/contact/team-members.html' %}
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Weekly Hours</h5>
+                </div>
+                <div class="card-body"></div>
+              </div>
+
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Skills</h5>
+                </div>
+                <div class="card-body">
+                  {% comment %}! Skilss kısmı buradan itibaren alındı{% endcomment %}
+                  {% include 'components/contact/skills.html' %}
+                </div>
+                <!-- end card body -->
+              </div>
+              <!-- end card -->
+            </div>
+            <!-- end col -->
+          </div>
+          <!-- end row -->
+        </div> <!-- container-fluid -->
+      </div>
+      <!-- End Page-content -->
+    </div>
+    <!-- end main content -->
+  {% endblock %}
+</div>
+<!-- END layout-wrapper -->

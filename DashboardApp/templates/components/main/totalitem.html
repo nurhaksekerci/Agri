@@ -1,0 +1,23 @@
+{% load static %}
+<div class="card-body">
+  <div class="d-flex align-items-center">
+    <div class="flex-grow-1">
+      <span class="text-muted mb-3 lh-1 d-block text-truncate"
+        >Total Items</span
+      >
+      <h4 class="mb-3">
+        <span class="counter-value" data-target="1256">0</span>
+      </h4>
+      <div class="text-nowrap">
+        <span class="badge bg-danger-subtle text-danger">-29 Trades</span>
+        <span class="ms-1 text-muted font-size-13">Since last week</span>
+      </div>
+    </div>
+    <div class="flex-shrink-0 text-end dash-widget">
+      <div
+        id="mini-chart2"
+        data-colors='["--bs-primary", "--bs-success"]'
+        class="apex-charts"></div>
+    </div>
+  </div>
+</div>

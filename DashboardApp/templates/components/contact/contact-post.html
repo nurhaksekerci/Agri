@@ -1,0 +1,16 @@
+{% load static %}
+
+{% comment %}! Not: Post yapısından bu sayfada iki tane vardı. Bir tanesine yer verildi post kısmı for ile döndürülür diye :){% endcomment %}
+<div class="tab-pane" id="post" role="tabpanel">
+  <div class="card">
+    <div class="card-body">
+      {% comment %}! Blog post yapısı for döngüsüyle alınacak olduğundan göz yormaması sebebiyle component olarak alındı{% endcomment %}
+      {% include 'components/contact/contact-blog-post.html' %}
+      <!-- end blog post -->
+    </div>
+    <!-- end card body -->
+  </div>
+  <!-- end card -->
+
+  <!-- end card -->
+</div>

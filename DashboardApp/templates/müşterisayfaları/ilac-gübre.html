@@ -1,0 +1,82 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+  <style>
+    select {
+      display: block;
+      margin: 20px;
+      padding: 10px;
+    }
+  </style>
+  <div class="row">
+    <div id="layout-wrapper">
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+        <div class="page-content">
+          <form>
+            <label for="options">Bir Hastalık seçin:</label>
+            <select id="options" name="options">
+              <option value="option1">Bölgesel Hastalık Dağılımı Grafiği</option>
+              <option value="option2">Gübre ve İlaç Kullanımı Verim Karşılaştırma Grafiği</option>
+              <option value="option3">İlaç ve Gübre Kullanım Raporu</option>
+            </select>
+          </form>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xl-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h4 class="card-title mb-0">Bölgesel Hastalık Dağılımı Grafiği</h4>
+                  </div>
+                  <div class="card-body">
+                    <div id="line_chart_dashed" class="apex-charts" dir="ltr">
+                      <img src="{% static 'img/DashedLine.png' %}" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+
+              <div class="col-xl-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h4 class="card-title mb-0">Gübre ve İlaç Kullanımı Verim Karşılaştırma Grafiği</h4>
+                  </div>
+                  <div class="card-body">
+                    <div id="column_chart" class="apex-charts" dir="ltr">
+                      <img src="{% static 'img/columnchartiki.png' %}" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-xl-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h4 class="card-title mb-0">İlaç ve Gübre Kullanım Raporu</h4>
+                  </div>
+                  <div class="card-body">
+                    <div id="pie_chart" class="apex-charts" dir="ltr">
+                      <img src="{% static 'img/piechart.png' %}" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+          </div>
+          <!-- end container-fluid -->
+        </div>
+        <!-- End Page-content -->
+      </div>
+      <!-- end main content -->
+    </div>
+  </div>
+{% endblock %}

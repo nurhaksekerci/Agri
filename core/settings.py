@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'agriweb',
     'rest_framework',
     'api',
+    'DashboardApp'
 ]
 
 MIDDLEWARE = [

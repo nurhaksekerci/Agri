@@ -1,0 +1,118 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+  <div id="layout-wrapper">
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+      <div class="page-content">
+        <div class="container-fluid">
+          <!-- Customer List Section with Collapse -->
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title mb-0">Customer List</h4>
+                  <br />
+                  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#customerList" aria-expanded="false" aria-controls="customerList">Show/Hide Customers</button>
+                </div>
+                <div id="customerList" class="collapse">
+                  <div class="card-body">
+                    <div class="row">
+                      <!-- Example Customer Card -->
+                      <div class="col-md-4">
+                        <div class="card customer-card" style="background-color: white;">
+                          <div class="card-body">
+                            <h5 class="card-title">Customer Name 1</h5>
+                            <p class="card-text">Details about Customer 1...</p>
+                            <button class="btn btn-info" type="button">Detay</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="card customer-card" style="background-color: white;">
+                          <div class="card-body">
+                            <h5 class="card-title">Customer Name 2</h5>
+                            <p class="card-text">Details about Customer 2...</p>
+                            <button class="btn btn-info" type="button">Detay</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="card customer-card" style="background-color: white;">
+                          <div class="card-body">
+                            <h5 class="card-title">Customer Name 3</h5>
+                            <p class="card-text">Details about Customer 3...</p>
+                            <button class="btn btn-info" type="button">Detay</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end collapse -->
+              </div>
+              <!-- end card -->
+            </div>
+          </div>
+          <!-- end row -->
+
+          <!-- Original Rows -->
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title mb-0">Zararlı Artış Grafiği</h4>
+                </div>
+                <div class="card-body">
+                  <div id="line_chart_datalabel" class="apex-charts" dir="ltr">
+                    <img src="{% static 'img/DashedLine.png' %}" alt="" />
+                  </div>
+                </div>
+              </div>
+              <!-- end card -->
+            </div>
+
+            <div class="col-xl-6">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title mb-0">Bölgesel Zararlı Artış Isı Haritası</h4>
+                </div>
+                <div class="card-body">
+                  <div id="line_chart_dashed" class="apex-charts" dir="ltr">
+                    <img src="{% static 'img/splinearea.png' %}" alt="" />
+                  </div>
+                </div>
+              </div>
+              <!-- end card -->
+            </div>
+          </div>
+          <!-- end row -->
+
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title mb-0">Redatör ve Zararlı Etkileşim Grafiği</h4>
+                </div>
+                <div class="card-body">
+                  <div id="spline_area" class="apex-charts" dir="ltr">
+                    <img src="{% static 'img/DashedLine.png' %}" alt="" />
+                  </div>
+                </div>
+              </div>
+              <!-- end card -->
+            </div>
+          </div>
+          <!-- end row -->
+        </div> <!-- container-fluid -->
+      </div>
+      <!-- End Page-content -->
+    </div>
+    <!-- end main content -->
+  </div>
+  <!-- END layout-wrapper -->
+{% endblock %}

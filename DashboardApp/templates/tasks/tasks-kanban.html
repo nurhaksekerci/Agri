@@ -1,0 +1,81 @@
+{% extends 'main/base.html' %}
+{% load static %}
+@@include("partials/main.html")
+
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "Kanban Board"})
+
+        <!-- dragula css -->
+        <link href="assets/libs/dragula/dragula.min.css" rel="stylesheet" type="text/css" />
+
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+        
+        {% block content %}
+            
+        
+            
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            @@include("partials/menu.html")
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        @@include("partials/page-title.html", {"pagetitle": "Tasks", "title": "Kanban Board"})
+
+                        <div class="row">
+                            {% include 'components/tasks/tasks-kanban-upcoming.html' %}
+                            <!-- end col -->
+
+                            {% include 'components/tasks/tasks-kanban-in-progress.html' %}
+                            <!-- end col -->
+
+                            {% include 'components/tasks/tasks-kanban-completed.html' %}
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                        
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+                
+                @@include("partials/footer.html")
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        
+        @@include("partials/right-sidebar.html")
+        
+        @@include("partials/vendor-scripts.html")
+        {% endblock content %}
+
+
+        <!-- dragula plugins -->
+        <script src="assets/libs/dragula/dragula.min.js"></script>
+
+        <!-- jquery-validation -->
+        <script src="assets/libs/jquery-validation/jquery.validate.min.js"></script>
+
+        <script src="assets/js/pages/task-kanban.init.js"></script>
+
+        <script src="assets/js/pages/task-form.init.js"></script>
+
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>

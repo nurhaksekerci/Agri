@@ -1,0 +1,56 @@
+{% extends "main/base.html" %}
+{% load static %}
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "Responsive Tables"})
+
+        <!-- Responsive Table css -->
+        <link href="assets/libs/admin-resources/rwd-table/rwd-table.min.css" rel="stylesheet" type="text/css" />
+
+        @@include("partials/head-css.html")
+
+    </head>
+    {% block content %}
+    @@include("partials/body.html")
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            @@include("partials/menu.html")
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        @@include("partials/page-title.html", {"pagetitle": "Tables", "title": "Responsive Tables"})
+
+                        {% include 'components/ekstralar/responsive_table.html' %}
+                        
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+                
+                @@include("partials/footer.html")
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        @@include("partials/right-sidebar.html")
+
+        @@include("partials/vendor-scripts.html")
+
+        <!-- Responsive Table js -->
+        <script src="{% static "libs/admin-resources/rwd-table/rwd-table.min.js" %}"></script>
+
+        <!-- Init js -->
+        <script src="{% static "js/pages/table-responsive.init.js" %}"></script>
+
+        <script src="{% static "js/app.js" %}"></script>
+        {% endblock content %}

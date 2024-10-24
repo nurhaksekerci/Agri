@@ -1,0 +1,76 @@
+{% load static %}
+<div id="sidebar-menu">
+  <!-- Left Menu Start -->
+  <ul class="metismenu list-unstyled" id="side-menu">
+    <li class="menu-title" data-key="t-menu">Menu</li>
+
+    <li>
+      <a href="{% url 'home' %}">
+        <i data-feather="home"></i>
+        <span class="badge rounded-pill bg-success-subtle text-success float-end">9+</span>
+        <span data-key="t-dashboard">Dashboard</span>
+      </a>
+    </li>
+
+    <li class="menu-title" data-key="t-apps">Apps</li>
+
+    <li>
+      <a href="{% url 'apps-calendar' %}">
+        <i data-feather="calendar"></i>
+        <span data-key="t-calendar">Calendar</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="javascript: void(0);" class="has-arrow">
+        <i data-feather="users"></i>
+        <span data-key="t-contacts">Contacts</span>
+      </a>
+      <ul class="sub-menu" aria-expanded="false">
+        <li>
+          <a href="{% url 'apps-contacts-grid' %}" data-key="t-user-grid">User Grid</a>
+        </li>
+
+        <li>
+          <a href="{% url 'apps-contacts-profile' %}" data-key="t-profile">Profile</a>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="javascript: void(0);" class="has-arrow">
+        <i data-feather="trello"></i>
+        <span data-key="t-tasks">Tasks</span>
+      </a>
+      <ul class="sub-menu" aria-expanded="false">
+        <li>
+          <a href="{% url 'tasks-list' %}" key="t-task-list">Task List</a>
+        </li>
+        <li>
+          <a href="{% url 'tasks-kanban' %}" key="t-kanban-board">Kanban Board</a>
+        </li>
+        <li>
+          <a href="{% url 'tasks-create' %}" key="t-create-task">Create Task</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="{% url 'gübre' %}">
+        <i data-feather="users"></i>
+        <span data-key="t-users">Gübre ve İlaç Firmaları</span>
+      </a>
+    </li>
+    <li>
+      <a href="{% url 'ipm' %}">
+        <i data-feather="users"></i>
+        <span data-key="t-users">IPM Firmaları</span>
+      </a>
+    </li>
+    <li>
+      <a href="{% url 'tohumcular' %}">
+        <i data-feather="users"></i>
+        <span data-key="t-users">Tohum Firmaları</span>
+      </a>
+    </li>
+  </ul>
+</div>
