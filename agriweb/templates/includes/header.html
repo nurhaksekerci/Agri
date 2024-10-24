@@ -17,7 +17,8 @@
                                 <li><a class="scroll-target" href="#top">Home</a></li>
                                 <li><a class="scroll-target" href="#about">About</a></li>
                                 <li><a class="scroll-target" href="#download">Download</a></li>
-                                
+                                <li><a class="" href="{% url 'farmercontact' %}">Contact</a></li>
+
                             </ul>
                         </nav>
                     </div>
@@ -49,7 +50,7 @@
 
                             <div class="octf-header-btn octf-cta-header">
                                 <div class="btn-cta-group btn-cta-header">
-                                    <a class="octf-btn btn-main-2" href="contact.html">Download App</a>
+                                    <a class="octf-btn btn-main-2 scroll-target" href="#download">Download</a>
                                     <a class="octf-btn btn-main-1" href="{% url 'supplier' %}">Supplier</a>
                                 </div>
                             </div>
@@ -67,8 +68,8 @@
                 <div class="octf-col">
                     <div class="mlogo_wrapper clearfix">
                         <div class="mobile_logo">
-                            <a href="index.html">
-                                <img src="images/logo-home2.svg" alt="Progrisaas">
+                            <a href="{% url 'index' %}">
+                                <img src="{% static 'agriweb/images/logo-home2.svg' %}" alt="Progrisaas">
                             </a>
                         </div>
                     </div>
@@ -107,8 +108,8 @@
                             <ul id="menu-main-menu" class="mobile_mainmenu none-style">
                                 <li><a class="scroll-target" href="#top">Home</a></li>
                                 <li><a class="scroll-target" href="#about">About</a></li>
-                                <li><a class="scroll-target" href="#payment">Payment</a></li>
                                 <li><a class="scroll-target" href="#doanload">Download</a></li>
+                                <li><a class="" href="{% url 'contact' %}">Contact</a></li>
                             </ul>
                         </div>
                     </div>

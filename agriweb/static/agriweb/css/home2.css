@@ -12,7 +12,7 @@ Styles Home 2
 }
 .site-header-2 .header-desktop .col-cta {
   width: 30%;
-} 
+}
 .site-header-2 .main-navigation ul > li > a, .site-header-2 .vertical-main-navigation ul > li > a {
   color: #fff;
 }
@@ -36,7 +36,7 @@ Styles Home 2
   color: #fff;
 }
 .top-h2 {
-  background-color: #5322C0;
+  background-color: #7CB79D;
   background-image: url('../images/background/home2-bg-1.png');
   background-position: top left;
   background-repeat: no-repeat;
@@ -90,7 +90,7 @@ Styles Home 2
   background-image: url('../images/background/bg-home2-2.png');
   background-position: top center;
   background-repeat: no-repeat;
-  background-color: #5322C0;
+  background-color: #7CB79D;
 }
 .ot-pricing-table__footer .btn-third-2:hover, .ot-pricing-table__footer .btn-third-2:focus {
   color: #5322C0;
@@ -200,13 +200,13 @@ hr.f2 {
   .payment-h2-img-3 {
     margin-left: -75px;
   }
-	
+
 }
 @media (min-width: 1200px){
   .work-img-h1 {
     margin-left: -20px;
   }
-	
+
 }
 @media (min-width: 993px) and (max-width: 1200px){
   .top-h2 h1 {
@@ -217,7 +217,7 @@ hr.f2 {
   .site-header-2 .octf-header-btn {
     display: block;
   }
-	
+
 }
 @media (max-width: 1024px){
   .site-header-2 .header_mobile {
@@ -231,11 +231,11 @@ hr.f2 {
   .solution-h2 {
     background-size: 0;
   }
-	
+
 }
 @media (max-width: 767px){
-	
+
 }
 @media (max-width: 480px){
-	
+
 }
